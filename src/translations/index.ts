@@ -1,7 +1,7 @@
 import { locale, set as setLocale, t as translate } from "frenchkiss";
 import icelandic from "./is-IS.json";
 
-type Translations = keyof typeof icelandic;
+export type Translations = keyof typeof icelandic;
 
 locale("is-IS");
 

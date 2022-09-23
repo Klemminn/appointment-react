@@ -1,4 +1,8 @@
 {
-	"users.name": "Nafn",
-	"users.role": "Hlutverk"
+	"customers.email": "Netfang",
+	"customers.name": "Nafn",
+	"customers.nextVisit": "Næsta heimsókn",
+	"customers.numberOfVisits": "Fjöldi heimsókna",
+	"customers.phoneNumber": "Símanúmer",
+	"staff.name": "Nafn"
 }

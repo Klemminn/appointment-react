@@ -1,24 +1,26 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { Drawer } from "components";
-import { CalendarPage, UsersPage } from "pages";
+import { Drawer, QueryWrapper } from "components";
+import { CalendarPage, CustomersPage, StaffPage } from "pages";
 
 import "./App.css";
 
 const App: React.FC = () => (
-  <BrowserRouter>
-    <Drawer>
-      <Routes>
-        <Route index element={<CalendarPage />} />
-        <Route path="book" element={<CalendarPage />} />
-        <Route path="calendar" element={<CalendarPage />} />
-        <Route path="services" element={<CalendarPage />} />
-        <Route path="users" element={<UsersPage />} />
-        <Route path="customers" element={<UsersPage />} />
-        <Route path="settings" element={<CalendarPage />} />
-      </Routes>
-    </Drawer>
-  </BrowserRouter>
+  <QueryWrapper>
+    <BrowserRouter>
+      <Drawer>
+        <Routes>
+          <Route index element={<CalendarPage />} />
+          <Route path="book" element={<CalendarPage />} />
+          <Route path="calendar" element={<CalendarPage />} />
+          <Route path="services" element={<CalendarPage />} />
+          <Route path="customers" element={<CustomersPage />} />
+          <Route path="staff" element={<StaffPage />} />
+          <Route path="settings" element={<CalendarPage />} />
+        </Routes>
+      </Drawer>
+    </BrowserRouter>
+  </QueryWrapper>
 );
 
 export default App;

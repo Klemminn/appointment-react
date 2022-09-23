@@ -1,4 +1,4 @@
-<babeledit_project version="1.2" be_version="2.7.1">
+<babeledit_project be_version="2.7.1" version="1.2">
     <!--
 
     BabelEdit project file
@@ -16,8 +16,21 @@
         <name></name>
         <children>
             <folder_node>
-                <name>users</name>
+                <name>customers</name>
                 <children>
+                    <concept_node>
+                        <name>email</name>
+                        <definition_loaded>false</definition_loaded>
+                        <description></description>
+                        <comment></comment>
+                        <default_text></default_text>
+                        <translations>
+                            <translation>
+                                <language>is-IS</language>
+                                <approved>false</approved>
+                            </translation>
+                        </translations>
+                    </concept_node>
                     <concept_node>
                         <name>name</name>
                         <definition_loaded>false</definition_loaded>
@@ -27,12 +40,56 @@
                         <translations>
                             <translation>
                                 <language>is-IS</language>
-                                <approved>true</approved>
+                                <approved>false</approved>
                             </translation>
                         </translations>
                     </concept_node>
                     <concept_node>
-                        <name>role</name>
+                        <name>nextVisit</name>
+                        <definition_loaded>false</definition_loaded>
+                        <description></description>
+                        <comment></comment>
+                        <default_text></default_text>
+                        <translations>
+                            <translation>
+                                <language>is-IS</language>
+                                <approved>false</approved>
+                            </translation>
+                        </translations>
+                    </concept_node>
+                    <concept_node>
+                        <name>numberOfVisits</name>
+                        <definition_loaded>false</definition_loaded>
+                        <description></description>
+                        <comment></comment>
+                        <default_text></default_text>
+                        <translations>
+                            <translation>
+                                <language>is-IS</language>
+                                <approved>false</approved>
+                            </translation>
+                        </translations>
+                    </concept_node>
+                    <concept_node>
+                        <name>phoneNumber</name>
+                        <definition_loaded>false</definition_loaded>
+                        <description></description>
+                        <comment></comment>
+                        <default_text></default_text>
+                        <translations>
+                            <translation>
+                                <language>is-IS</language>
+                                <approved>false</approved>
+                            </translation>
+                        </translations>
+                    </concept_node>
+                </children>
+            </folder_node>
+            <folder_node>
+                <name>staff</name>
+                <children>
+                    <concept_node>
+                        <name>name</name>
                         <definition_loaded>false</definition_loaded>
                         <description></description>
                         <comment></comment>

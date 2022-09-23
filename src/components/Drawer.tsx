@@ -29,7 +29,7 @@ const items = [
   {
     Icon: UserIcon,
     label: "Starfsmenn",
-    link: "/users",
+    link: "/staff",
   },
   {
     Icon: UserGroupIcon,
