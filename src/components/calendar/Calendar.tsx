@@ -20,6 +20,7 @@ import is from "./translations/is.json";
 import * as Panels from "../Panels";
 
 import { Appointment, CompanySchedule, Staff } from "types";
+import { CalendarClickEvent } from "types/calendar";
 
 loadCldr(gregorian, numbers, timeZoneNames);
 L10n.load({
@@ -34,6 +35,7 @@ registerLicense(
 type CalendarProps = CompanySchedule & {
   appointments: Appointment[];
   staff: Staff[];
+  onClick?(e: CalendarClickEvent): void;
 };
 
 const Calendar: React.FC<CalendarProps> = ({
@@ -42,6 +44,7 @@ const Calendar: React.FC<CalendarProps> = ({
   openingTime,
   workDays,
   staff,
+  onClick,
 }) => {
   const scheduleRef = useRef(null as any);
 
@@ -63,9 +66,9 @@ const Calendar: React.FC<CalendarProps> = ({
       timezone="UTC"
       ref={(ref) => (scheduleRef.current = ref)}
       allowMultiCellSelection={false}
-      popupOpen={(e) => {
-        console.log("open", e);
+      popupOpen={(e: CalendarClickEvent) => {
         e.cancel = true;
+        onClick?.(e);
       }}
       eventSettings={{
         dataSource: appointments,
@@ -74,7 +77,7 @@ const Calendar: React.FC<CalendarProps> = ({
       <ResourcesDirective>
         <ResourceDirective
           name="staff"
-          field="resourceId"
+          field="staffId"
           textField="name"
           idField="id"
           colorField="color"

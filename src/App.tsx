@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Drawer, QueryWrapper } from "components";
+import { ModalProvider } from "components/modals/ModalHandlers";
 import { CalendarPage, CustomersPage, StaffPage } from "pages";
 
 import "./App.css";
@@ -20,6 +21,7 @@ const App: React.FC = () => (
         </Routes>
       </Drawer>
     </BrowserRouter>
+    <ModalProvider />
   </QueryWrapper>
 );
 

@@ -13,9 +13,6 @@ const StaffPage: React.FC = () => {
           label={staff.name}
           sublabel={staff.role}
         />,
-        <div>787-1234</div>,
-        <div className="flex justify-end">73</div>,
-        <div>18. ágúst 2022</div>,
       ])}
     />
   );

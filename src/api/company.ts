@@ -29,36 +29,29 @@ export const useStaff = () => {
 };
 
 const getStaff = async (): Promise<Staff[]> => {
+  console.log("staff");
   return [
     {
       id: "1",
-      name: "Will Smith",
+      name: "Jói klipp",
       color: "#ea7a57",
-      role: "Cardioligst",
+      role: "Eigandi",
       image:
         "https://media.glamour.com/photos/5a425fd3b6bcee68da9f86f8/master/w_2560%2Cc_limit/best-face-oil.png",
     },
     {
       id: "2",
-      name: "Alice",
+      name: "Magga hár",
       color: "#7fa900",
-      role: "Neurologist",
+      role: "Klippsnillingur",
       image:
         "https://media.glamour.com/photos/5a425fd3b6bcee68da9f86f8/master/w_2560%2Cc_limit/best-face-oil.png",
     },
     {
       id: "3",
-      name: "Robson",
+      name: "Sigga skegg",
       color: "#7fa900",
-      role: "Orthopedic Surgeon",
-      image:
-        "https://media.glamour.com/photos/5a425fd3b6bcee68da9f86f8/master/w_2560%2Cc_limit/best-face-oil.png",
-    },
-    {
-      id: "4",
-      name: "Count Dracula",
-      color: "#7fa900",
-      role: "Orthopedic Surgeon",
+      role: "Skeggsnyrtir",
       image:
         "https://media.glamour.com/photos/5a425fd3b6bcee68da9f86f8/master/w_2560%2Cc_limit/best-face-oil.png",
     },

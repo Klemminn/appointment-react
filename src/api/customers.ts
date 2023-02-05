@@ -2,13 +2,13 @@ import { useQuery } from "@tanstack/react-query";
 
 import { Customer } from "types";
 
-export const useCustomers = () => {
-  return useQuery(["customers"], getCustomers, {
+export const useCustomers = () =>
+  useQuery(["customers"], getCustomers, {
     initialData: [],
   });
-};
 
 export const getCustomers = async (): Promise<Customer[]> => {
+  console.log("blegh");
   return [
     {
       id: "0",

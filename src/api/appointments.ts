@@ -12,10 +12,10 @@ export const getAppointments = async (): Promise<Appointment[]> => {
   return [
     {
       id: "2",
-      resourceId: "3",
+      staffId: "3",
       Subject: "Great success",
-      StartTime: new Date(2022, 8, 21, 10, 0),
-      EndTime: new Date(2022, 8, 21, 12, 30),
+      StartTime: new Date(2023, 1, 4, 10, 0),
+      EndTime: new Date(2023, 1, 4, 12, 30),
     },
   ];
 };

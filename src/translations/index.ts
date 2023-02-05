@@ -5,7 +5,6 @@ export type Translations = keyof typeof icelandic;
 
 locale("is-IS");
 
-// Add translations in each languages
 setLocale("is-IS", icelandic);
 
 export const t = (code: Translations) => translate(code);

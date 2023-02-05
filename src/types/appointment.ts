@@ -1,6 +1,6 @@
 export type Appointment = {
   id: string;
-  resourceId: string;
+  staffId: string;
   Subject: string;
   StartTime: Date;
   EndTime: Date;

@@ -4,6 +4,8 @@ import { Table } from "components";
 const CustomersPage: React.FC = () => {
   const { data: customers } = useCustomers();
 
+  console.log("customers", customers);
+
   return (
     <Table
       headers={[
