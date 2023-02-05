@@ -1,9 +1,11 @@
-import { useAppointments, useCompanySchedule, useStaff } from "api";
-import { Calendar } from "components";
+import { useCompanySchedule, useStaff } from "api/company";
+import { useAppointments } from "api/appointments";
 import { openModal } from "components/modals/ModalHandlers";
 import { CalendarClickEvent } from "types/calendar";
+import { AvatarTitlePanel } from "components/Panels";
+import { Calendar } from "components/calendar/Calendar";
 
-const CalendarPage: React.FC = () => {
+export const CalendarPage: React.FC = () => {
   const appointmentsQuery = useAppointments();
   const companyScheduleQuery = useCompanySchedule();
   const staffQuery = useStaff();
@@ -16,13 +18,23 @@ const CalendarPage: React.FC = () => {
   };
 
   return (
-    <Calendar
-      staff={staffQuery.data}
-      appointments={appointmentsQuery.data}
-      onClick={onClick}
-      {...companyScheduleQuery.data}
-    />
+    <>
+      <div className="flex flex-row">
+        {staffQuery.data.map((staff) => (
+          <AvatarTitlePanel
+            avatarSrc={staff.image}
+            label={staff.name}
+            sublabel={staff.role}
+            onClick={() => console.log("hehe")}
+          />
+        ))}
+      </div>
+      <Calendar
+        staff={staffQuery.data}
+        appointments={appointmentsQuery.data}
+        onClick={onClick}
+        {...companyScheduleQuery.data}
+      />
+    </>
   );
 };
-
-export default CalendarPage;

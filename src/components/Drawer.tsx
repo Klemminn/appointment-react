@@ -8,7 +8,7 @@ import {
   CogIcon,
 } from "@heroicons/react/solid";
 
-import Link from "./Link";
+import { Link } from "./Link";
 
 const items = [
   {
@@ -43,7 +43,7 @@ const items = [
   },
 ];
 
-const Drawer: React.FC = ({ children }) => (
+export const Drawer: React.FC = ({ children }) => (
   <div className="h-screen drawer drawer-mobile w-full">
     <input id="drawer" type="checkbox" className="drawer-toggle" />
     <div className="drawer-content">
@@ -59,7 +59,7 @@ const Drawer: React.FC = ({ children }) => (
       <label htmlFor="drawer" className="drawer-overlay"></label>
       <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
         {items.map(({ Icon, label, link }) => (
-          <li key={link}>
+          <li className="mt-2" key={link}>
             <Link to={link}>
               <Icon className="h-5 w-5" />
               {label}
@@ -70,5 +70,3 @@ const Drawer: React.FC = ({ children }) => (
     </div>
   </div>
 );
-
-export default Drawer;

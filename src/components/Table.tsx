@@ -19,7 +19,7 @@ type TableProps = {
   rows: JSX.Element[][];
 };
 
-const Table: React.FC<TableProps> = ({ headers, rows }) => (
+export const Table: React.FC<TableProps> = ({ headers, rows }) => (
   <div className="overflow-x-auto w-full">
     <table className="table w-full">
       <thead>
@@ -56,5 +56,3 @@ const Table: React.FC<TableProps> = ({ headers, rows }) => (
     </table>
   </div>
 );
-
-export default Table;

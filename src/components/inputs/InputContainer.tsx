@@ -3,7 +3,7 @@ export type InputContainerProps = {
   label?: string;
 };
 
-const InputContainer: React.FC<InputContainerProps> = ({
+export const InputContainer: React.FC<InputContainerProps> = ({
   children,
   error,
   label,
@@ -18,5 +18,3 @@ const InputContainer: React.FC<InputContainerProps> = ({
     {error && <div className="text-error">{error}</div>}
   </div>
 );
-
-export default InputContainer;

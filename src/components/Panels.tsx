@@ -1,8 +1,9 @@
-import Label from "./Label";
-import Avatar from "./Avatar";
+import { Label } from "./Label";
+import { Avatar, AvatarProps } from "./Avatar";
 
 type AvatarLabelPanelProps = React.HTMLAttributes<HTMLDivElement> & {
-  avatarSrc: string;
+  avatarSrc: AvatarProps["imageSrc"];
+  isGreyscale?: boolean;
   label: string;
   sublabel?: string;
 };

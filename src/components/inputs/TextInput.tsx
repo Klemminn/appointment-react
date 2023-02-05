@@ -1,4 +1,4 @@
-import InputContainer, { InputContainerProps } from "./InputContainer";
+import { InputContainer, InputContainerProps } from "./InputContainer";
 
 type TextInputProps = InputContainerProps & {
   placeholder?: string;
@@ -6,7 +6,7 @@ type TextInputProps = InputContainerProps & {
   onChange?(text: string): void;
 };
 
-const TextInput = ({
+export const TextInput = ({
   placeholder,
   value,
   onChange,
@@ -22,5 +22,3 @@ const TextInput = ({
     />
   </InputContainer>
 );
-
-export default TextInput;

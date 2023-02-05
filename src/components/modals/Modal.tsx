@@ -4,7 +4,7 @@ type ModalProps = {
   titleText: string;
 };
 
-const Modal: React.FC<ModalProps> = ({ children, titleText }) => (
+export const Modal: React.FC<ModalProps> = ({ children, titleText }) => (
   <>
     <input
       type="checkbox"
@@ -20,5 +20,3 @@ const Modal: React.FC<ModalProps> = ({ children, titleText }) => (
     </label>
   </>
 );
-
-export default Modal;

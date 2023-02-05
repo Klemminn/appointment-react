@@ -1,7 +1,7 @@
 import { useCustomers } from "api/customers";
-import { Table } from "components";
+import { Table } from "components/Table";
 
-const CustomersPage: React.FC = () => {
+export const CustomersPage: React.FC = () => {
   const { data: customers } = useCustomers();
 
   console.log("customers", customers);
@@ -23,5 +23,3 @@ const CustomersPage: React.FC = () => {
     />
   );
 };
-
-export default CustomersPage;

@@ -13,9 +13,12 @@ export const getAppointments = async (): Promise<Appointment[]> => {
     {
       id: "2",
       staffId: "3",
+      customerId: "0",
       Subject: "Great success",
       StartTime: new Date(2023, 1, 4, 10, 0),
       EndTime: new Date(2023, 1, 4, 12, 30),
+      appointmentEmails: [],
+      appointmentSMSs: [],
     },
   ];
 };

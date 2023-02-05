@@ -22,14 +22,12 @@ const getCompanySchedule = async (): Promise<CompanySchedule> => {
   };
 };
 
-export const useStaff = () => {
-  return useQuery(["staff"], getStaff, {
+export const useStaff = () =>
+  useQuery(["staff"], getStaff, {
     initialData: [],
   });
-};
 
 const getStaff = async (): Promise<Staff[]> => {
-  console.log("staff");
   return [
     {
       id: "1",

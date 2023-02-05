@@ -1,14 +1,15 @@
-import { useStaff } from "api";
-import { Table, Panels } from "components";
+import { useStaff } from "api/company";
+import { AvatarTitlePanel } from "components/Panels";
+import { Table } from "components/Table";
 
-const StaffPage: React.FC = () => {
+export const StaffPage: React.FC = () => {
   const { data: staff } = useStaff();
 
   return (
     <Table
       headers={[{ translation: "staff.name" }]}
       rows={staff.map((staff) => [
-        <Panels.AvatarTitlePanel
+        <AvatarTitlePanel
           avatarSrc={staff.image}
           label={staff.name}
           sublabel={staff.role}
@@ -17,5 +18,3 @@ const StaffPage: React.FC = () => {
     />
   );
 };
-
-export default StaffPage;

@@ -1,14 +1,15 @@
-import TextInput from "components/inputs/TextInput";
 import { t } from "translations";
 import { CalendarClickEvent } from "types/calendar";
 
-import Modal from "./Modal";
+import { Modal } from "./Modal";
 
 type CreateAppointmentModalProps = {
   data: CalendarClickEvent["data"];
 };
 
-const CreateAppointmentModal = ({ data }: CreateAppointmentModalProps) => {
+export const CreateAppointmentModal = ({
+  data,
+}: CreateAppointmentModalProps) => {
   console.log("props data", data);
 
   return (
@@ -20,5 +21,3 @@ const CreateAppointmentModal = ({ data }: CreateAppointmentModalProps) => {
     </Modal>
   );
 };
-
-export default CreateAppointmentModal;

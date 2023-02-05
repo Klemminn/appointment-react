@@ -1,10 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { Drawer, QueryWrapper } from "components";
 import { ModalProvider } from "components/modals/ModalHandlers";
-import { CalendarPage, CustomersPage, StaffPage } from "pages";
+import { CalendarPage } from "pages/CalendarPage";
+import { CustomersPage } from "pages/CustomersPage";
+import { StaffPage } from "pages/StaffPage";
+import { ServicesPage } from "pages/ServicesPage";
 
 import "./App.css";
+import { QueryWrapper } from "components/QueryWrapper";
+import { Drawer } from "components/Drawer";
 
 const App: React.FC = () => (
   <QueryWrapper>
@@ -14,7 +18,7 @@ const App: React.FC = () => (
           <Route index element={<CalendarPage />} />
           <Route path="book" element={<CalendarPage />} />
           <Route path="calendar" element={<CalendarPage />} />
-          <Route path="services" element={<CalendarPage />} />
+          <Route path="services" element={<ServicesPage />} />
           <Route path="customers" element={<CustomersPage />} />
           <Route path="staff" element={<StaffPage />} />
           <Route path="settings" element={<CalendarPage />} />

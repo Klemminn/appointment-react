@@ -38,7 +38,7 @@ type CalendarProps = CompanySchedule & {
   onClick?(e: CalendarClickEvent): void;
 };
 
-const Calendar: React.FC<CalendarProps> = ({
+export const Calendar: React.FC<CalendarProps> = ({
   appointments,
   closingTime,
   openingTime,
@@ -104,5 +104,3 @@ const StaffHeader: React.FC<StaffHeaderProps> = ({ staff }) => {
     />
   );
 };
-
-export default Calendar;
