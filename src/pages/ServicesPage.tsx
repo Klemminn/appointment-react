@@ -1,15 +1,17 @@
 import { useServices } from "api/services";
 import { Table } from "components/Table";
+import { useTranslate } from "translations";
 
 export const ServicesPage: React.FC = () => {
   const { data: services } = useServices();
+  const { t } = useTranslate(translations);
 
   return (
     <Table
       headers={[
-        { translation: "services.name" },
-        { translation: "services.description" },
-        { translation: "services.timeslots" },
+        { label: t("name") },
+        { label: t("description") },
+        { label: t("timeslots") },
       ]}
       rows={services.map((service) => [
         <div>{service.name}</div>,
@@ -22,4 +24,10 @@ export const ServicesPage: React.FC = () => {
       ])}
     />
   );
+};
+
+const translations = {
+  is: {
+    timeslots: "Tími",
+  },
 };

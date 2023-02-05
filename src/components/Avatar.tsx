@@ -1,12 +1,26 @@
+import classNames from "classnames";
+
 export type AvatarProps = {
   imageSrc: string;
-  isGreyscale?: boolean;
+  isGrayscale?: boolean;
   alt?: string;
 };
 
-export const Avatar: React.FC<AvatarProps> = ({ imageSrc, alt }) => (
+export const Avatar: React.FC<AvatarProps> = ({
+  isGrayscale,
+  imageSrc,
+  alt,
+}) => (
   <div className="avatar">
-    <div className="mask mask-squircle w-12 h-12">
+    <div
+      className={classNames(
+        "mask",
+        "mask-squircle",
+        "w-12",
+        "h-12",
+        isGrayscale && "grayscale"
+      )}
+    >
       <img src={imageSrc} alt={alt} />
     </div>
   </div>

@@ -1,18 +1,20 @@
 import { useCustomers } from "api/customers";
 import { Table } from "components/Table";
+import { useTranslate } from "translations";
 
 export const CustomersPage: React.FC = () => {
   const { data: customers } = useCustomers();
+  const { t } = useTranslate(translations);
 
   console.log("customers", customers);
 
   return (
     <Table
       headers={[
-        { translation: "customers.name" },
-        { translation: "customers.phoneNumber" },
-        { translation: "customers.numberOfVisits", justify: "center" },
-        { translation: "customers.nextVisit" },
+        { label: t("name") },
+        { label: t("phoneNumber") },
+        { label: t("numberOfVisits"), justify: "center" },
+        { label: t("nextVisit") },
       ]}
       rows={customers.map((customer) => [
         <div>{customer.name}</div>,
@@ -22,4 +24,11 @@ export const CustomersPage: React.FC = () => {
       ])}
     />
   );
+};
+
+const translations = {
+  is: {
+    numberOfVisits: "Fjöldi heimsókna",
+    nextVisit: "Næsta heimsókn",
+  },
 };
