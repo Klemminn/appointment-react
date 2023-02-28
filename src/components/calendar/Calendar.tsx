@@ -21,6 +21,7 @@ import * as Panels from "../Panels";
 
 import { Appointment, CompanySchedule, Staff } from "types";
 import { CalendarClickEvent } from "types/calendar";
+import { EyeOffIcon } from "@heroicons/react/solid";
 
 loadCldr(gregorian, numbers, timeZoneNames);
 L10n.load({
@@ -35,6 +36,7 @@ registerLicense(
 type CalendarProps = CompanySchedule & {
   appointments: Appointment[];
   staff: Staff[];
+  onHideStaff?(staffId: Staff["id"]): void;
   onClick?(e: CalendarClickEvent): void;
 };
 
@@ -44,6 +46,7 @@ export const Calendar: React.FC<CalendarProps> = ({
   openingTime,
   workDays,
   staff,
+  onHideStaff,
   onClick,
 }) => {
   const scheduleRef = useRef(null as any);
@@ -56,7 +59,7 @@ export const Calendar: React.FC<CalendarProps> = ({
     <ScheduleComponent
       group={{ resources: ["staff"] }}
       resourceHeaderTemplate={(props: any) => (
-        <StaffHeader staff={props.resourceData} />
+        <StaffHeader staff={props.resourceData} onHideStaff={onHideStaff} />
       )}
       currentView="Day"
       workDays={workDays}
@@ -91,16 +94,17 @@ export const Calendar: React.FC<CalendarProps> = ({
 
 type StaffHeaderProps = {
   staff: Staff;
+  onHideStaff: CalendarProps["onHideStaff"];
 };
 
-const StaffHeader: React.FC<StaffHeaderProps> = ({ staff }) => {
+const StaffHeader: React.FC<StaffHeaderProps> = ({ staff, onHideStaff }) => {
   const { image, name, role } = staff;
   return (
-    <Panels.AvatarTitlePanel
-      avatarSrc={image}
-      label={name}
-      sublabel={role}
-      onClick={() => console.log("hehe")}
-    />
+    <Panels.AvatarTitlePanel avatarSrc={image} label={name} sublabel={role}>
+      <EyeOffIcon
+        className="h-5 w-5 cursor-pointer"
+        onClick={() => onHideStaff?.(staff.id)}
+      />
+    </Panels.AvatarTitlePanel>
   );
 };
