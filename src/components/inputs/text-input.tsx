@@ -1,4 +1,4 @@
-import { InputContainer, InputContainerProps } from "./InputContainer";
+import { InputContainer, InputContainerProps } from "./input-container";
 
 type TextInputProps = InputContainerProps & {
   placeholder?: string;

@@ -1,5 +1,5 @@
-import { Label } from "./Label";
-import { Avatar, AvatarProps } from "./Avatar";
+import { Label } from "./label";
+import { Avatar, AvatarProps } from "./avatar";
 
 type AvatarLabelPanelProps = React.HTMLAttributes<HTMLDivElement> & {
   avatarSrc: AvatarProps["imageSrc"];

@@ -1,11 +1,11 @@
 import { useCompanySchedule, useStaff } from "api/company";
 import { useAppointments } from "api/appointments";
-import { openModal } from "components/modals/ModalHandlers";
+import { openModal } from "components/modals/modal-handlers";
 import { CalendarClickEvent } from "types/calendar";
-import { AvatarTitlePanel } from "components/Panels";
-import { Calendar } from "components/calendar/Calendar";
+import { AvatarTitlePanel } from "components/panels";
+import { Calendar } from "components/calendar/calendar";
 import { createSelectionStore } from "states/create-selection-store";
-import { Header } from "components/Header";
+import { Header } from "components/header";
 
 const hideStaffStore = createSelectionStore("calendarHiddenStaff");
 

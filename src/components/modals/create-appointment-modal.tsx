@@ -1,7 +1,7 @@
 import { useTranslate } from "translations";
 import { CalendarClickEvent } from "types/calendar";
 
-import { Modal } from "./Modal";
+import { Modal } from "./modal";
 
 type CreateAppointmentModalProps = {
   data: CalendarClickEvent["data"];

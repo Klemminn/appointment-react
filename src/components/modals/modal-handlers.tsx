@@ -1,6 +1,6 @@
 import create from "zustand";
 
-import { CreateAppointmentModal } from "./CreateAppointmentModal";
+import { CreateAppointmentModal } from "./create-appointment-modal";
 
 const modals = {
   CreateAppointmentModal,

@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import { merge } from "lodash-es";
 
 import coreIS from "./is.json";
-import { createLocaleStore, LocaleCode } from "./localeStore";
+import { createLocaleStore, LocaleCode } from "./locale-store";
 
 type CoreTranslationKey = keyof typeof coreIS;
 

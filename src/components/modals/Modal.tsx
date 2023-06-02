@@ -1,4 +1,4 @@
-import { closeModal } from "./ModalHandlers";
+import { closeModal } from "./modal-handlers";
 
 type ModalProps = {
   titleText: string;

@@ -1,6 +1,6 @@
 import { useStaff } from "api/company";
-import { AvatarTitlePanel } from "components/Panels";
-import { Table } from "components/Table";
+import { AvatarTitlePanel } from "components/panels";
+import { Table } from "components/table";
 import { useTranslate } from "translations";
 
 export const StaffPage: React.FC = () => {

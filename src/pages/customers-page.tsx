@@ -1,5 +1,5 @@
 import { useCustomers } from "api/customers";
-import { Table } from "components/Table";
+import { Table } from "components/table";
 import { useTranslate } from "translations";
 
 export const CustomersPage: React.FC = () => {

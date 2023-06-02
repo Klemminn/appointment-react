@@ -1,14 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { ModalProvider } from "components/modals/ModalHandlers";
-import { CalendarPage } from "pages/CalendarPage";
-import { CustomersPage } from "pages/CustomersPage";
-import { StaffPage } from "pages/StaffPage";
-import { ServicesPage } from "pages/ServicesPage";
+import { ModalProvider } from "components/modals/modal-handlers";
+import { CalendarPage } from "pages/calendar-page";
+import { CustomersPage } from "pages/customers-page";
+import { StaffPage } from "pages/staff-page";
+import { ServicesPage } from "pages/service-page";
 
 import "./App.css";
-import { QueryWrapper } from "components/QueryWrapper";
-import { Drawer } from "components/Drawer";
+import { QueryWrapper } from "components/query-wrapper";
+import { Drawer } from "components/drawer";
+import { Sidebar } from "components/sidebar";
 
 const App: React.FC = () => (
   <QueryWrapper>
@@ -26,6 +27,7 @@ const App: React.FC = () => (
       </Drawer>
     </BrowserRouter>
     <ModalProvider />
+    <Sidebar.Provider />
   </QueryWrapper>
 );
 

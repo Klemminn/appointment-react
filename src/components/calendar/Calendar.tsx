@@ -17,7 +17,7 @@ import * as timeZoneNames from "cldr-data/main/is/timeZoneNames.json";
 
 import is from "./translations/is.json";
 
-import * as Panels from "../Panels";
+import * as Panels from "../panels";
 
 import { Appointment, CompanySchedule, Staff } from "types";
 import { CalendarClickEvent } from "types/calendar";

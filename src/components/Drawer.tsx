@@ -8,7 +8,7 @@ import {
   CogIcon,
 } from "@heroicons/react/solid";
 
-import { Link } from "./Link";
+import { Link } from "./link";
 
 const items = [
   {
