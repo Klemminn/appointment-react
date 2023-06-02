@@ -6,7 +6,7 @@ import { CustomersPage } from "pages/customers-page";
 import { StaffPage } from "pages/staff-page";
 import { ServicesPage } from "pages/service-page";
 
-import "./App.css";
+import "./app.css";
 import { QueryWrapper } from "components/query-wrapper";
 import { Drawer } from "components/drawer";
 import { Sidebar } from "components/sidebar";
@@ -25,9 +25,9 @@ const App: React.FC = () => (
           <Route path="settings" element={<CalendarPage />} />
         </Routes>
       </Drawer>
+      <Sidebar.Provider />
     </BrowserRouter>
     <ModalProvider />
-    <Sidebar.Provider />
   </QueryWrapper>
 );
 
