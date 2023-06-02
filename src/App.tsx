@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { ModalProvider } from "components/modals/modal-handlers";
-import { CalendarPage } from "pages/calendar-page";
+import { CalendarPage } from "pages/calendar/calendar-page";
 import { CustomersPage } from "pages/customers-page";
 import { StaffPage } from "pages/staff-page";
 import { ServicesPage } from "pages/service-page";

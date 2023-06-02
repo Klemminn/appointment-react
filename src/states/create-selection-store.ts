@@ -12,7 +12,7 @@ const assertArray = (input: Id | Id[]) =>
   Array.isArray(input) ? input : [input];
 
 const createPersistStore = (persistKey: string) =>
-  create(persist(() => ({}), { name: persistKey }));
+  create(persist<IdBooleanMap>(() => ({}), { name: persistKey }));
 
 const createSimpleStore = () => create<IdBooleanMap>(() => ({}));
 

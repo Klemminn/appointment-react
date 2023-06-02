@@ -155,7 +155,7 @@ const StyledSidebar = styled.div({
   right: 0,
   zIndex: 9998,
   height: "100vh",
-  // boxShadow: theme.shadow.fancy,
+  boxShadow: theme.shadow.medium,
 });
 
 const AnimationContainer = styled(motion.aside)({
@@ -163,7 +163,7 @@ const AnimationContainer = styled(motion.aside)({
   flexDirection: "column",
   height: "100%",
   zIndex: 9999,
-  backgroundColor: theme.color.primary20,
+  backgroundColor: theme.color.primary10,
 });
 
 const Container = styled.div(({ width }: { width: string }) => ({
@@ -208,7 +208,7 @@ const Header = styled.div({
   padding: headerFooterPadding,
   borderBottom: `${pxToRem(1)} solid`,
   borderColor: theme.color.primary40,
-  backgroundColor: theme.color.primary20,
+  backgroundColor: theme.color.primary10,
   "@media (max-width: 768px)": {
     height: pxToRem(72),
   },
@@ -218,7 +218,7 @@ const Footer = styled.div({
   padding: headerFooterPadding,
   borderTop: `${pxToRem(1)} solid`,
   borderColor: theme.color.primary40,
-  backgroundColor: theme.color.primary20,
+  backgroundColor: theme.color.primary10,
   "@media (max-width: 768px)": {
     height: pxToRem(72),
   },
@@ -260,7 +260,7 @@ type SimpleIconHeaderProps = {
 };
 
 const SimpleIconHeader = ({ title, color, icon }: SimpleIconHeaderProps) => (
-  <div className="gap-2 flex-row content-center">
+  <div className="gap-2 flex content-center">
     {icon}
     <HeaderTitle color={color} title={title} />
   </div>
@@ -284,13 +284,13 @@ const SimpleHeader: FC<SimpleHeaderProps> = ({
 }) => (
   <SidebarHeader {...rest}>
     <div className="gap-4">
-      <div className="gap-2 flex-row content-center justify-between">
+      <div className="gap-2 flex content-center justify-between">
         {icon ? (
           <SimpleIconHeader icon={icon} title={title} {...rest} />
         ) : (
           <HeaderTitle title={title} />
         )}
-        <div className="gap-2 flex-row content-center">
+        <div className="gap-2 flex content-center">
           {children}
           <CloseButton onClose={onClose} />
         </div>

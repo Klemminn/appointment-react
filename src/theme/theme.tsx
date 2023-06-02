@@ -25,6 +25,7 @@ export const theme = {
     primary40: "#dee2e6",
     primary30: "#e9ecef",
     primary20: "#f8f9fa",
+    primary10: "#ffffff",
   },
   font: {
     bold18: `${weight.bold} ${fontSize["18"]} ${fonts}`,
@@ -42,6 +43,9 @@ export const theme = {
 
     regular10: `${weight.regular} ${fontSize["10"]} ${fonts}`,
     semibold10: `${weight.semibold} ${fontSize["10"]} ${fonts}`,
+  },
+  shadow: {
+    medium: "0px 0.25rem 0.5rem rgba(0, 0, 0, 0.16);",
   },
 };
 

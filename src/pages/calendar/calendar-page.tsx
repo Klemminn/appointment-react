@@ -6,6 +6,7 @@ import { AvatarTitlePanel } from "components/panels";
 import { Calendar } from "components/calendar/calendar";
 import { createSelectionStore } from "states/create-selection-store";
 import { Header } from "components/header";
+import { useCreateAppointmentSidebar } from "./create-appointment-sidebar";
 
 const hideStaffStore = createSelectionStore("calendarHiddenStaff");
 
@@ -14,10 +15,11 @@ export const CalendarPage: React.FC = () => {
   const companyScheduleQuery = useCompanySchedule();
   const staffQuery = useStaff();
   const hiddenStaff = hideStaffStore.useStore();
+  const showCreateAppointmentSidebar = useCreateAppointmentSidebar();
 
   const onClick = (e: CalendarClickEvent) => {
     const isEmpty = !Object.hasOwn(e.data, "id");
-    openModal("CreateAppointmentModal", { data: e.data });
+    showCreateAppointmentSidebar({ data: e.data });
     console.log("isEmpty", isEmpty);
     console.log(e);
   };
